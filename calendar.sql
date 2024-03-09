@@ -1,0 +1,15 @@
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+CREATE TABLE IF NOT EXISTS calender (
+    sno INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL,
+    date DATE NOT NULL,
+    eventname VARCHAR(255) NOT NULL,
+    description TEXT,
+    FOREIGN KEY (email) REFERENCES student(semail) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
+
+--
+
+
